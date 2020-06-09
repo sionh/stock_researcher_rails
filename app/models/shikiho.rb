@@ -1,0 +1,2 @@
+class Shikiho < ApplicationRecord
+end
