@@ -36,6 +36,7 @@ class ShikihosController < ApplicationController
   # GET /shikihos/1
   # GET /shikihos/1.json
   def show
+    @quarter = self.get_quarter_from_num(@shikiho.quarter.to_s)
   end
 
   # GET /shikihos/new

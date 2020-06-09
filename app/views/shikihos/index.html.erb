@@ -33,7 +33,7 @@
         <th width="250">トピック</th>
         <th width="250">見通し</th>
         <th width="50"></th>
-        <!--<th width="50"></th> -->
+        <th width="50"></th>
       </tr>
     </thead>
 
@@ -46,11 +46,7 @@
           <td><%= shikiho.topic %></td>
           <td><%= shikiho.outlook %></td>
           <td><%= link_to '詳細', shikiho %></td>
-          <%
-=begin%>
- <td><%= link_to '履歴', code_detail_path(shikiho.code) %></td> 
-<%
-=end%>
+          <td><%= link_to '履歴', code_detail_path(shikiho.code) %></td> 
           <!--
           <td><%= link_to 'Edit', edit_shikiho_path(shikiho) %></td>
           <td><%= link_to 'Destroy', shikiho, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
