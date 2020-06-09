@@ -1,3 +1,31 @@
 // Place all the styles related to the shikihos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    margin:0 auto;
+    }
+    #header {
+        height:50px;
+        // background-color:#009b9f;
+    }
+    #sidebar {
+        width:200px;
+        min-height:500px;
+        height:auto;
+        // background-color:#009b9f;
+        float:left;
+        margin-top:10px;
+    }
+    #content { 
+        margin-left:260px;
+        min-height:500px;
+        height:auto;
+        // background-color:#009b9f;
+        margin-top:10px;
+    }
+    #footer { 
+        margin-top:10px;
+        height:50px;
+        // background-color:#009b9f;
+    }
