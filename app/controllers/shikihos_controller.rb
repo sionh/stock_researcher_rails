@@ -1,5 +1,6 @@
 class ShikihosController < ApplicationController
   before_action :set_shikiho, only: [:show, :edit, :update, :destroy]
+  helper_method :get_quarter_from_num
 
   # GET /shikihos
   # GET /shikihos.json
@@ -31,6 +32,18 @@ class ShikihosController < ApplicationController
     when '4' then
       '冬'
     end
+  end
+
+  def code
+    @search_params = params
+    @year = params['year'].present? ? params['year'] : 2020
+    quarter = params['quarter'].present? ? params['quarter'] : 1
+
+    @shikihos = Shikiho.all
+    @shikihos = @shikihos.code_equal(params[:code]) if params[:code].present?
+    @shikihos = @shikihos.order(year: :desc, quarter: :desc)
+    @shikiho = @shikihos[0]
+    @quarter = self.get_quarter_from_num(quarter)
   end
 
   # GET /shikihos/1
