@@ -11,6 +11,36 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label '銘柄コード' %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label '企業名' %>
+    <%= form.text_field :comp_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label '会社URl' %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :feature %>
+    <%= form.text_field :feature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topic %>
+    <%= form.text_field :topic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outlook %>
+    <%= form.text_field :outlook %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
